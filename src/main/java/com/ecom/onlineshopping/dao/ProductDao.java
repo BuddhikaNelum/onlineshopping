@@ -30,9 +30,20 @@ public class ProductDao {
         product2.setUnitInStock(20);
         product2.setProductManufacturer("Apple");
 
+        Product product3 = new Product();
+        product3.setProductName("Nokia 6");
+        product3.setProductCategory("Nokia");
+        product3.setProductDescription("This is the new Nokia 6");
+        product3.setProductPrice(120000);
+        product3.setProductCondition("New Arrival");
+        product3.setProductStatus("Active");
+        product3.setUnitInStock(25);
+        product3.setProductManufacturer("Nokia");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
         productList.add(product2);
+        productList.add(product3);
 
         return productList;
     }
