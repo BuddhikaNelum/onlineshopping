@@ -2,6 +2,7 @@ package com.ecom.onlineshopping.dao;
 
 import com.ecom.onlineshopping.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class ProductDao {
 
     public List<Product> getProductList(){
         Product product1 = new Product();
+        product1.setProductId("ID01");
         product1.setProductName("iphone 7 Plus");
         product1.setProductCategory("iphone");
         product1.setProductDescription("This is the new iphone 7");
@@ -21,6 +23,7 @@ public class ProductDao {
         product1.setProductManufacturer("Apple");
 
         Product product2 = new Product();
+        product2.setProductId("ID02");
         product2.setProductName("iphone 8 Plus");
         product2.setProductCategory("iphone");
         product2.setProductDescription("This is the new iphone 8");
@@ -31,6 +34,7 @@ public class ProductDao {
         product2.setProductManufacturer("Apple");
 
         Product product3 = new Product();
+        product3.setProductId("ID03");
         product3.setProductName("Nokia 6");
         product3.setProductCategory("Nokia");
         product3.setProductDescription("This is the new Nokia 6");
@@ -46,6 +50,15 @@ public class ProductDao {
         productList.add(product3);
 
         return productList;
+    }
+
+    public Product getProductbById(String productId) throws IOException{
+        for(Product product:getProductList()){
+            if(product.getProductId().equals(productId)){
+                return product;
+            }
+        }
+        throw new IOException("No products found");
     }
 
 }

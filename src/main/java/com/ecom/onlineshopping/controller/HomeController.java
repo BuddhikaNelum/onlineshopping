@@ -4,8 +4,10 @@ import com.ecom.onlineshopping.dao.ProductDao;
 import com.ecom.onlineshopping.model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -27,8 +29,10 @@ public class HomeController {
 //        return "productlist";
 //    }
 
-    @RequestMapping("viewProduct")
-    public String viewProduct(){
+    @RequestMapping("/viewProduct/{productId}")
+    public String viewProduct(@PathVariable String productId, Model model) throws IOException {
+        Product product = productDao.getProductbById(productId);
+        model.addAttribute(product);
         return "viewProduct";
     }
 

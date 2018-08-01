@@ -2,6 +2,7 @@ package com.ecom.onlineshopping.model;
 
 public class Product {
 
+    private String productId;
     private String productName;
     private String ProductCategory;
     private String productDescription;
@@ -11,9 +12,15 @@ public class Product {
     private int unitInStock;
     private String productManufacturer;
 
-    public String getProductName() {
-        return productName;
+    public String getProductId() {
+        return productId;
     }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() { return productName; }
 
     public void setProductName(String productName) {
         this.productName = productName;
