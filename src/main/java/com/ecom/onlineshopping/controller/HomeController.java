@@ -1,6 +1,5 @@
 package com.ecom.onlineshopping.controller;
 
-import com.ecom.onlineshopping.dao.ProductDao;
 import com.ecom.onlineshopping.model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
