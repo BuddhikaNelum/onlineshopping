@@ -49,7 +49,7 @@
                     <a class="nav-link js-scroll-trigger" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="viewProduct">Products</a>
+                    <a class="nav-link js-scroll-trigger" href="#services">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
